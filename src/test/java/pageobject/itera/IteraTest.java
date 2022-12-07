@@ -26,6 +26,7 @@ public class IteraTest {
         mainPage.selectDayOfTheWeek();
         mainPage.selectCountry();
         mainPage.selectYears();
+        mainPage.selectTool();
 
 
     }
