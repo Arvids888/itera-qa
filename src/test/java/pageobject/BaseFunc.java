@@ -68,6 +68,10 @@ public class BaseFunc {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public WebElement findUploadElement(By locator) {
+        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
     public WebElement findElement(By parent, By child) {
         return wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(parent, child));
     }

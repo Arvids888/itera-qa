@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import pageobject.BaseFunc;
 import pageobject.itera.pages.MainPage;
 
+import java.awt.*;
+
 public class IteraTest {
     private final String URL = "itera-qa.azurewebsites.net/home/automation";
 
@@ -17,16 +19,19 @@ public class IteraTest {
     }
 
     @Test
-    public void checkSurvey() {
+    public void checkSurvey() throws AWTException {
         baseFunc.openPage(URL);
         MainPage mainPage = new MainPage(baseFunc);
 
         mainPage.insertCredentials();
-        mainPage.selectGender();
-        mainPage.selectDayOfTheWeek();
-        mainPage.selectCountry();
-        mainPage.selectYears();
-        mainPage.selectTool();
+        mainPage.selectGender("male");
+        mainPage.selectDayOfTheWeek("friday");
+        mainPage.selectCountry("Italy");
+        mainPage.selectYears("3years");
+        mainPage.selectTool("selenium");
+        mainPage.selectFile("C:\\\\Iteracat.jpg");
+        mainPage.submit();
+
 
 
     }
